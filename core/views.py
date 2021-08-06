@@ -1,15 +1,28 @@
-import json
+import json, random
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.renderers import StaticHTMLRenderer
 from rest_framework import status
 from core.utilities import createUser, notifyTeamAndSaveIPAddress, getAccessToken
 from django.contrib.auth import authenticate
 
 
 class HomeView(APIView):
+    permission_classes = []
+    renderer_classes = [StaticHTMLRenderer]
+
     def get(self, request):
-        content = {'message': 'Welcome back {}!'.format(request.user.username)}
-        return Response(content)
+        emojis = ["😉", "😍", "😎", "🤩", "😘", "😄", "😂", "🤓"]
+        htmlContent = "<center><h1 style='font-family:verdana;top:40%;position:fixed;left:0;right:0;'>Nothing to see here {}</h1></center>".format(random.choice(emojis))
+        return Response(htmlContent)
+
+
+class DemoView(APIView):
+    permission_classes = []
+
+    def get(self, request):
+
+        return Response({'status': 'success', 'message': 'The purpose of this API is to wakeu up the sleeping dynos'})
 
 
 class UserView(APIView):
