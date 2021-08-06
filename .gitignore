@@ -1,0 +1,14 @@
+*.pyc
+node_modules/
+*.egg-info
+*.pot
+*.py[co]
+.tox/
+__pycache__
+.vscode/
+*.db
+*.pid
+.idea/
+*.log.*
+venv/
+.env
