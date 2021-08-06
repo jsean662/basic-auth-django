@@ -12,4 +12,4 @@ __pycache__
 *.log.*
 venv/
 .env
-db.sqlite3
+*.sqlite3
