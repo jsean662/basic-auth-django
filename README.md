@@ -13,8 +13,8 @@ Following are the features of this project:
 - Create account
 - Login into your account
 - JWT tokens are used for authentication
-- IP addresses are captured whenever a user is successfully authenticated;
-- Admin panel can be used to download(CSV, JSON, TSV, etc) the users' history
+- IP addresses are captured whenever a user is successfully authenticated
+- Admin panel can be used to download users' login history in CSV(JSON, TSV, etc) format 
 - All the secrets are stored in environment variables
 
 The project is hosted on Heroku, with the following end point [shielded-temple-70406.herokuapp.com](https://shielded-temple-70406.herokuapp.com/). The admin panel can be accessed using [this link](https://shielded-temple-70406.herokuapp.com/admin/login/)
