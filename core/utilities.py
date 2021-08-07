@@ -10,9 +10,9 @@ def createUser(username, password):
     if created:
         user.set_password(password)
         user.save()
-        return True
+        return True, user
     
-    return False
+    return False, None
 
 
 def getClientIP(request):
@@ -36,8 +36,7 @@ def notifyTeamOfIPAddress(ip, user):
     # TODO: This can be wrapped in celery function which can then be called asynchronously
     # and with better retry mechanisms
     
-    # response = requests.request("POST", url, data=json.dumps(payload), headers=headers)
-    # print(response.text)
+    requests.request("POST", url, data=json.dumps(payload), headers=headers)
 
 
 def saveUsersIPAddress(ip, user):
