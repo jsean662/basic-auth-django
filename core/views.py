@@ -95,5 +95,5 @@ class HomeView(APIView):
     renderer_classes = [StaticHTMLRenderer]
 
     def get(self, request):
-        htmlContent = "<center><h1 style='font-family:verdana;top:40%;position:fixed;left:0;right:0;'>This is the backend for <a href='#'>BasicAuth</a></h1></center>"
+        htmlContent = "<center><h1 style='font-family:verdana;top:40%;position:fixed;left:0;right:0;'>This is the backend for <a href='https://basic-auth.jsawant.com/'>BasicAuth</a></h1></center>"
         return Response(htmlContent)
